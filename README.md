@@ -12,6 +12,9 @@
 | `appsscript.json` | 台灣時區及最少必要的 Apps Script 權限宣告 |
 | `高雄高中歷屆考題範本.csv` | 17 欄空白歷屆題範本，不含假歷屆試題 |
 | `高雄高中學校名錄.csv` / `schools.json` | 47 校常用選項；非完整或即時官方名錄 |
+| `pdf-catalog.json` | 網頁內建 PDF 目錄；目前尚無 ExamBank PDF |
+| `tools/import_pdf_archive.py` | 將自行下載或獲准使用的本機 PDF 資料包加入網頁 |
+| `tests/pdf_archive.py` | 本機資料包匯入、去重及完整性測試 |
 | `tests/past.cjs` / `tests/cloud.cjs` | 歷屆題流程與一鍵初始化模擬測試 |
 | `questions.json` | 同一份初始題庫，供檢閱與驗證；APP 不需載入此檔 |
 | `tests/smoke.cjs` | Chromium 瀏覽器功能測試 |
@@ -122,6 +125,7 @@ node tests/smoke.cjs
 node tests/gas.cjs
 node tests/past.cjs
 node tests/cloud.cjs
+python3 tests/pdf_archive.py
 ```
 
 瀏覽器測試先嘗試本機 `file://`；若受託管 Chromium 的管理政策阻擋，改用測試內建的本機 HTTP 伺服器載入同一個單檔，檢查設定、精確分鐘分配、錯題與重測、重整後保留資料、CSV 引號／換行與錯誤格式、AI 成功與失敗（模擬回應）、手機版面及文字注入。GAS 測試採 API／試算表替身，驗證五題追加、每日防重、拒絕無效回應、HTTP 失敗與觸發器設定；不等同於實際 Google 或 OpenAI 部署驗證。
@@ -201,11 +205,36 @@ APP 新增獨立頁籤，學生可選高雄高中／高職、學年度、年級�
 - [928 教育歷屆考題](https://928education.com/listing/past-exam-student/)
 - [高雄市班級網站考題資源](https://class.kh.edu.tw/20267)
 
-來源連結是前往網站下載的入口；未自動抓取或重新發布這些網站的試卷。實際下載權限、試卷及答案以來源網站為準。
+另已加入 [ExamBank 全國中小學題庫](https://exambank.darrenlu.com/) 入口。來源連結是前往網站下載的入口；目前未將這些網站的 PDF 搬入網頁。實際下載權限、試卷及答案以來源網站為準。
 
 下載後有兩個直接可見的入口：
 
-1. **PDF 自行練習**：選擇學校，再選本機 PDF（上限 20 MB）。APP 以瀏覽器 PDF 閱讀器顯示試卷，亦可「另開試卷」。檔案只保留於本次頁面記憶體，不上傳或寫入 localStorage；重整後需重新選檔。手機或不支援內嵌 PDF 的瀏覽器請使用「另開試卷」。學校標籤採上傳當時的選擇，之後篩選其他學校不會改寫已開試卷的標籤。
+1. **PDF 離線資料庫**：選擇這批試卷所屬學校，再選一份或多份本機 PDF（每份上限 20 MB）；混合學校請選「待分類」。APP 以瀏覽器 PDF 閱讀器顯示試卷，亦可「另開試卷」。PDF 二進位檔案保存於 IndexedDB，重整後可從資料庫再次閱讀，不上傳或寫入 localStorage。若瀏覽器阻擋儲存或空間不足，會明確標示為「僅本次頁面」，此類檔案重整後需重新選檔。手機或不支援內嵌 PDF 的瀏覽器請使用「另開試卷」。可以搜尋檔名、依學校分類、更改單份學校、下載副本或刪除本機副本。相同內容採 SHA-256 去重；清除網站資料或換瀏覽器將失去自行匯入的 PDF，所以仍需保留原始下載檔案。
 2. **CSV 自動批改**：下載空白 17 欄範本，整理文字選擇題與答案、解析、來源後匯入，使用學校／學年度等篩選作答，並保存錯題。也可從 Google Sheets／GAS 公開 CSV 連結更新。
 
 PDF 目前不自動 OCR、拆題或推斷答案；Word、ZIP、圖片請先解壓或轉存為 PDF 閱讀，或整理成 CSV 作答。
+
+
+## ExamBank：目前下載狀態與使用條款
+
+2026-10-08 已實際讀取 ExamBank 首頁、代表性考卷頁與使用條款。首頁顯示約 **8,590 份全國國中／高中試卷**，並非只收錄高雄高中。
+
+[使用條款第四節](https://exambank.darrenlu.com/terms) 明確規定：**「您不得利用自動化工具大量下載本站內容。」** 因此已停止全站自動下載流程，**目前該站 PDF 的實際下載數為 0**。`pdf-catalog.json` 記錄 `awaiting_bulk_permission`，沒有以假試卷或原創題替代。
+
+要全站搬入網頁，需要站方提供可批次使用的資料包或另行授權；帳號免費下載不等於已取得自動大量下載的許可。使用者仍可前往來源按網站流程自行下載，再加入 APP 的本機 PDF 資料庫。
+
+### 將已取得的 PDF 資料包內建到網頁
+
+若取得站方提供的資料包，先在本機解壓成資料夾，再執行：
+
+```sh
+python3 tools/import_pdf_archive.py --input /你的試卷資料夾 --source https://exambank.darrenlu.com/
+```
+
+如果整批都屬於同一所學校，可加 `--school 鳳新高中`；混合資料包省略此欄，保留待分類。其他來源的檔案請使用實際 `--source`，或省略來源；不會自動把所有檔案都標成 ExamBank。
+
+工具只讀取本機檔案，**不發出網路請求**；驗證 PDF 標頭、EOF 與複製檔的 SHA-256，以內容雜湊去重，複製至 `pdfs/`，更新 `pdf-catalog.json` 並同步內嵌 HTML 目錄。壞檔／不完整檔會列於 `importFailures`，不標示為成功。重跑可補檔，既有 PDF 校驗失敗時會重新複製。
+
+內建目錄不透過 Fetch 讀取，因此可以離線列出試卷。**內建 PDF 的離線版本要連同 `pdfs/` 資料夾保存，不能只下載 HTML。** APP 程式仍完整包含於單一 HTML；試卷為另外的檔案資產。瀏覽器自行匯入的 PDF 則保存在該瀏覽器 IndexedDB，不會自動加入 Git 儲存庫或 Google Sheets，也不會出現在題庫 CSV 匯出。
+
+目前提供的 HTML 沒有 ExamBank PDF 資產；PDF 資料庫的本機保存功能已用測試檔案驗證，這些測試檔案沒有納入正式題庫。
