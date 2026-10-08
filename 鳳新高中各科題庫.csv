@@ -1,0 +1,31 @@
+﻿題目 ID,考科,範圍/單元,難易度,題目內容,選項 A,選項 B,選項 C,選項 D,正確答案,詳細解析
+FX-001,英文,單字／動詞,基礎,The school will ___ a science fair next month.,organize,borrow,disappear,refuse,A,organize 表示「籌辦」，與 science fair（科學展）搭配；其他選項分別為借用、消失、拒絕。
+FX-002,英文,文法／現在完成式,基礎,Mia ___ in Kaohsiung since 2020.,lives,lived,has lived,is living,C,since 2020 表示從過去延續到現在，使用現在完成式 has lived。
+FX-003,英文,文法／假設語氣,段考進階題,"If I ___ more time now, I would join the club.",have,had,will have,have had,B,與現在事實相反的假設使用 If + 過去式，主句使用 would + 原形動詞。
+FX-004,英文,文法／關係代名詞,基礎,The student ___ won the speech contest is my classmate.,which,whose,who,where,C,先行詞 student 是人，且關係代名詞在子句中作主詞，因此用 who。
+FX-005,英文,單字／形容詞,基礎,Please be ___ when you cross the busy street.,careful,careless,absent,ordinary,A,過馬路應當 careful（小心）；careless 是粗心、absent 是缺席、ordinary 是普通。
+FX-006,英文,文法／動名詞,基礎,Kevin enjoys ___ novels on weekends.,read,reads,to read,reading,D,enjoy 後面的動詞必須使用動名詞 V-ing，因此選 reading。
+FX-007,英文,文法／被動語態,基礎,The classroom ___ by the students yesterday.,cleans,was cleaned,has cleaned,is cleaning,B,教室是被清掃的對象，且 yesterday 表示過去，使用 was + 過去分詞。
+FX-008,英文,文法／比較級,基礎,This problem is ___ than the previous one.,difficult,most difficult,more difficult,as difficult,C,than 提示比較級；多音節形容詞 difficult 的比較級是 more difficult。
+FX-009,英文,文法／連接詞,基礎,"___ it was raining, the game continued.",Although,Because,Unless,Until,A,「雖然下雨，比賽仍繼續」是讓步關係，因此選 Although。
+FX-010,英文,單字／片語,基礎,We should ___ the lights when we leave the room.,look after,turn off,give up,take after,B,turn off 表示關閉；look after 是照顧，give up 是放棄，take after 是外貌或性格像。
+FX-011,英文,文法／間接問句,段考進階題,Do you know ___?,where does he live,where he lives,where is he living,where he live,B,間接問句使用直述句語序：疑問詞 + 主詞 + 動詞。he 的現在簡單式動詞應為 lives。
+FX-012,英文,文法／不定詞,基礎,They decided ___ the museum after lunch.,visit,visiting,to visit,visited,C,decide 後使用 to + 原形動詞，表示決定做某事。
+FX-013,英文,文法／主詞動詞一致,段考進階題,Each of the students ___ a notebook.,have,has,are having,were having,B,主詞是 Each，視為單數；一般現在式使用 has。of the students 不改變主詞的單複數。
+FX-014,英文,文法／過去完成式,段考進階題,"By the time we arrived, the movie ___.",starts,has started,had started,will start,C,電影開始在我們抵達這個過去時間點之前，因此使用過去完成式 had started。
+FX-015,英文,單字／搭配詞,基礎,Regular practice can help you make ___ in English.,progress,permission,weather,furniture,A,make progress 是「取得進步」的固定搭配，progress 為不可數名詞。
+FX-016,數學,代數／一次方程式,基礎,若 3x − 5 = 16，則 x =？,5,6,7,8,C,兩邊加 5 得 3x = 21，再除以 3 得 x = 7。
+FX-017,數學,代數／二次方程式,基礎,方程式 x² − 5x + 6 = 0 的兩根為何？,1 與 6,2 與 3,−2 與 −3,−1 與 −6,B,因式分解為 (x − 2)(x − 3) = 0，因此 x = 2 或 3。
+FX-018,數學,函數／定義域,基礎,實數函數 f(x) = √(x − 2) 的定義域為何？,x > 2,x ≤ 2,所有實數,x ≥ 2,D,平方根內的數必須大於或等於 0，所以 x − 2 ≥ 0，即 x ≥ 2。
+FX-019,數學,指數與對數,基礎,log₂ 8 的值為何？,2,3,4,8,B,因為 2³ = 8，所以 log₂ 8 = 3。
+FX-020,數學,數列／等差數列,基礎,等差數列首項為 4、公差為 3，第 10 項為何？,27,30,31,34,C,a₁₀ = a₁ + (10 − 1)d = 4 + 9 × 3 = 31。
+FX-021,數學,數列／等比數列,基礎,等比數列 2、6、18、… 的第 5 項為何？,54,108,162,486,C,公比為 3，第 5 項為 2 × 3⁴ = 162。
+FX-022,數學,機率／古典機率,基礎,擲一顆公平六面骰一次，點數大於 4 的機率為何？,1/6,1/3,1/2,2/3,B,可能點數有 6 種，其中 5、6 共 2 種符合，機率為 2/6 = 1/3。
+FX-023,數學,排列組合,基礎,從 5 位同學中選出 2 位代表，不區分職位，共有幾種選法？,5,10,20,25,B,"不區分順序使用組合 C(5, 2) = 5 × 4 ÷ 2 = 10。"
+FX-024,數學,解析幾何／直線,基礎,"通過 (1, 2) 與 (3, 6) 的直線斜率為何？",1,2,3,4,B,斜率為 (6 − 2)/(3 − 1) = 4/2 = 2。
+FX-025,數學,解析幾何／距離,基礎,"平面上 (0, 0) 與 (3, 4) 兩點的距離為何？",4,5,6,7,B,距離 = √(3² + 4²) = √25 = 5。
+FX-026,數學,三角比,基礎,sin 30° 的值為何？,0,1/2,√2/2,√3/2,B,在 30°–60°–90° 三角形中，30° 的對邊為斜邊的一半，所以 sin 30° = 1/2。
+FX-027,數學,代數／不等式,基礎,不等式 −2x + 4 > 10 的解為何？,x > −3,x < −3,x > 3,x < 3,B,移項得 −2x > 6；除以負數 −2 時不等號反向，因此 x < −3。
+FX-028,數學,函數／二次函數,段考進階題,f(x) = x² − 4x + 7 的最小值為何？,2,3,4,7,B,配方得 f(x) = (x − 2)² + 3，平方項最小為 0，因此最小值為 3。
+FX-029,數學,機率／獨立事件,段考進階題,連續擲公平硬幣 3 次，恰有 2 次正面的機率為何？,1/8,1/4,3/8,1/2,C,"3 次共有 2³ = 8 種等可能結果；2 次正面的位置共有 C(3, 2) = 3 種，因此機率為 3/8。"
+FX-030,數學,指數與對數,段考進階題,若 2^(x+1) = 16，則 x =？,2,3,4,5,B,16 = 2⁴，底數相同可令指數相等：x + 1 = 4，所以 x = 3。
