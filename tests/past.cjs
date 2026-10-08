@@ -1,0 +1,29 @@
+const {chromium}=require('playwright'),http=require('node:http'),fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
+(async()=>{
+ const server=http.createServer((req,res)=>{res.setHeader('Content-Type','text/html;charset=utf-8');res.end(fs.readFileSync(path.resolve(__dirname,'../index.html')));});await new Promise(r=>server.listen(0,'127.0.0.1',r));
+ const browser=await chromium.launch({executablePath:process.env.CHROMIUM_PATH||'/usr/bin/chromium',args:['--no-sandbox']});const page=await browser.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));
+ await page.goto(`http://127.0.0.1:${server.address().port}`);await page.locator('[data-page=past]').click();
+ assert.equal(await page.evaluate(()=>state.bank.filter(q=>q.kind==='past').length),0);assert.ok(await page.locator('#start-past').isDisabled());assert.ok(await page.locator('#past-empty').isVisible());
+ // All fixtures are synthetic test data, never shipped as real past papers.
+ const csv=await page.evaluate(()=>{const questions=[0,1,2].map((n)=>({...structuredClone(seed[n]),id:`TEST-PAST-${n}`,kind:'past',school:n===2?'高雄高中':'鳳新高中',year:n===1?'113':'114',semester:n===1?'下學期':'上學期',grade:n===1?'高二':'高一',exam:'第一次段考',source:'https://example.test/synthetic-test-only',question:'[TEST ONLY] '+seed[n].question}));return csvString(questions,true);});
+ await page.locator('#past-file').setInputFiles({name:'test-past.csv',mimeType:'text/csv',buffer:Buffer.from(csv)});await page.waitForFunction(()=>document.querySelector('#past-status').textContent.includes('已合併'));
+ assert.equal(await page.locator('#past-list .question').count(),2);assert.equal(await page.locator('#past-year option').count(),3);
+ assert.equal(await page.locator('#past-list a').first().getAttribute('href'),'https://example.test/synthetic-test-only');
+ await page.locator('#past-year').selectOption('114');assert.equal(await page.locator('#past-list .question').count(),1);
+ await page.locator('#past-grade').selectOption('高二');assert.ok(await page.locator('#start-past').isDisabled());await page.locator('#past-grade').selectOption('高一');
+ await page.locator('#past-number').fill('1');await page.locator('#start-past').click();const q=await page.evaluate(()=>activeExam.questions[0]);assert.equal(q.school,'鳳新高中');assert.equal(q.year,'114');assert.match(await page.locator('#exam-content .notice').innerText(),/歷屆/);
+ const wrong=['A','B','C','D'].find(a=>a!==q.answer);await page.locator(`[name=answer-0][value=${wrong}]`).check();await page.locator('#answer-form button').click();assert.equal(await page.evaluate(()=>Object.values(state.mistakes)[0].question.school),'鳳新高中');
+ await page.locator('#view-mistakes').click();await page.locator('#retry-mistakes').click();await page.locator(`[name=answer-0][value=${q.answer}]`).check();await page.locator('#answer-form button').click();assert.equal(await page.evaluate(()=>Object.keys(state.mistakes).length),0);
+ // Daily selection distinguishes original and imported past papers.
+ await page.locator('#exam-source').selectOption('past');assert.ok(await page.locator('#exam-school-field').isVisible());await page.locator('#exam-past-school').selectOption('高雄高中');assert.equal(await page.evaluate(()=>pool().length),1);
+ await page.locator('#exam-source').selectOption('original');assert.ok(await page.locator('#exam-school-field').isHidden());assert.equal(await page.evaluate(()=>pool().length),30);
+ // Reject missing provenance, unsafe source, ID collisions, without mutating bank.
+ for(const type of ['missing','unsafe','collision']){
+  const outcome=await page.evaluate(type=>{const before=JSON.stringify(state.bank),q={...structuredClone(seed[0]),id:'TEST-FAIL',kind:'past',school:'鳳新高中',year:'114',semester:'上學期',grade:'高一',exam:'第一次段考',source:'https://example.test/test'};if(type==='missing')q.source='';if(type==='unsafe')q.source='javascript:alert(1)';if(type==='collision')q.id=seed[0].id;let error;try{importPastCSV(csvString([q],true));}catch(e){error=e.message;}return {error,unchanged:before===JSON.stringify(state.bank)};},type);assert.ok(outcome.error,type);assert.ok(outcome.unchanged,type);
+ }
+ assert.equal(await page.evaluate(()=>parseCSV(csvString(state.bank)).filter(q=>q.kind==='past').length),3);
+ await page.reload();assert.equal(await page.evaluate(()=>state.bank.filter(q=>q.kind==='past').length),3);
+ await page.locator('[data-page=past]').click();await page.locator('#school-file').setInputFiles({name:'schools.csv',mimeType:'text/csv',buffer:Buffer.from('\uFEFF學校名稱,官網網址\r\n測試用学校,https://example.test/school\r\n')});await page.waitForFunction(()=>document.querySelector('#school-status').textContent.includes('已合併'));assert.ok(await page.evaluate(()=>state.schools.some(s=>s.name==='測試用学校')));
+ await page.locator('#past-school').selectOption('高雄高中');await page.setViewportSize({width:390,height:844});assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));await page.screenshot({path:'/tmp/fengxin-past-mobile.png',fullPage:false});
+ assert.deepEqual(errors,[]);await browser.close();await new Promise(r=>server.close(r));console.log('PASS: past paper metadata, dependent filters, exam/retry, CSV round-trip, source validation, school directory, persistence, mobile layout.');
+})().catch(e=>{console.error(e);process.exit(1);});
