@@ -3,43 +3,807 @@
   "policy": "This is a discovery index. Exam PDFs stay on the original provider unless reuse permission is explicit. Open school/provider links directly; the app does not scrape or redistribute third-party exam papers.",
   "sources": [
     {
-      "id": "kh-gushan-official", "title": "鼓山高中｜高中歷屆試題", "provider": "高雄市立鼓山高中（校方）", "category": "校方官方題庫", "schools": ["鼓山高中"], "coverage": "114學年度下學期第1至第3次段考；頁面亦列113學年度及更早試題。多科，部分附解答。", "url": "https://www.kusjh.kh.edu.tw/sidelist/67", "status": "公開；校方頁面於2026-07-07有更新紀錄", "note": "試卷及答案由校方原站提供；請在原站下載。"
+      "id": "kh-gushan-official",
+      "title": "鼓山高中｜高中歷屆試題",
+      "provider": "高雄市立鼓山高中（校方）",
+      "category": "校方官方題庫",
+      "schools": [
+        "鼓山高中"
+      ],
+      "coverage": "114學年度下學期第1至第3次段考；頁面亦列113學年度及更早試題。多科，部分附解答。",
+      "url": "https://www.kusjh.kh.edu.tw/sidelist/67",
+      "status": "公開；校方頁面於2026-07-07有更新紀錄",
+      "note": "試卷及答案由校方原站提供；請在原站下載。",
+      "downloads": [
+        {
+          "title": "114下第3次｜高中解答 ZIP",
+          "url": "https://www.kusjh.kh.edu.tw/upload/files/%E9%AB%98%E4%B8%AD%E8%A7%A3%E7%AD%94114-2-3.zip"
+        },
+        {
+          "title": "114下第3次｜高中英聽 PDF",
+          "url": "https://www.kusjh.kh.edu.tw/upload/files/114-2-3%E9%AB%98%E4%B8%AD%E8%8B%B1%E8%81%BD.pdf"
+        },
+        {
+          "title": "114下第3次｜高中英文 PDF",
+          "url": "https://www.kusjh.kh.edu.tw/upload/files/114-2-3%E9%AB%98%E4%B8%AD%E8%8B%B1%E6%96%87.pdf"
+        },
+        {
+          "title": "114下第3次｜高中生物 PDF",
+          "url": "https://www.kusjh.kh.edu.tw/upload/files/114-2-3%E9%AB%98%E4%B8%AD%E7%94%9F%E7%89%A9.pdf"
+        },
+        {
+          "title": "114下第3次｜高中物理 PDF",
+          "url": "https://www.kusjh.kh.edu.tw/upload/files/114-2-3%E9%AB%98%E4%B8%AD%E7%89%A9%E7%90%86.pdf"
+        },
+        {
+          "title": "114下第3次｜高中歷史 PDF",
+          "url": "https://www.kusjh.kh.edu.tw/upload/files/114-2-3%E9%AB%98%E4%B8%AD%E6%AD%B7%E5%8F%B2.pdf"
+        },
+        {
+          "title": "114下第3次｜高中數學 PDF",
+          "url": "https://www.kusjh.kh.edu.tw/upload/files/114-2-3%E9%AB%98%E4%B8%AD%E6%95%B8%E5%AD%B8.pdf"
+        },
+        {
+          "title": "114下第3次｜高中地科 PDF",
+          "url": "https://www.kusjh.kh.edu.tw/upload/files/114-2-3%E9%AB%98%E4%B8%AD%E5%9C%B0%E7%A7%91.pdf"
+        },
+        {
+          "title": "114下第3次｜高中地理 PDF",
+          "url": "https://www.kusjh.kh.edu.tw/upload/files/114-2-3%E9%AB%98%E4%B8%AD%E5%9C%B0%E7%90%86.pdf"
+        },
+        {
+          "title": "114下第3次｜高中國文 PDF",
+          "url": "https://www.kusjh.kh.edu.tw/upload/files/114-2-3%E9%AB%98%E4%B8%AD%E5%9C%8B%E6%96%87.pdf"
+        },
+        {
+          "title": "114下第3次｜高中化學 PDF",
+          "url": "https://www.kusjh.kh.edu.tw/upload/files/114-2-3%E9%AB%98%E4%B8%AD%E5%8C%96%E5%AD%B8.pdf"
+        },
+        {
+          "title": "114下第3次｜高中公民 PDF",
+          "url": "https://www.kusjh.kh.edu.tw/upload/files/114-2-3%E9%AB%98%E4%B8%AD%E5%85%AC%E6%B0%91.pdf"
+        },
+        {
+          "title": "114下第2次｜高中解答 ZIP",
+          "url": "https://www.kusjh.kh.edu.tw/upload/files/%E9%AB%98%E4%B8%AD%E8%A7%A3%E7%AD%94114-2-2.zip"
+        },
+        {
+          "title": "114下第2次｜未標科目附件 PDF",
+          "url": "https://www.kusjh.kh.edu.tw/upload/files/dcc1758b0f107395a66753116ff2c46e.pdf"
+        },
+        {
+          "title": "114下第2次｜高中體育 PDF",
+          "url": "https://www.kusjh.kh.edu.tw/upload/files/114-2-2%E9%AB%98%E4%B8%AD%E9%AB%94%E8%82%B2.pdf"
+        },
+        {
+          "title": "114下第2次｜高中英聽 PDF",
+          "url": "https://www.kusjh.kh.edu.tw/upload/files/114-2-2%E9%AB%98%E4%B8%AD%E8%8B%B1%E8%81%BD.pdf"
+        },
+        {
+          "title": "114下第2次｜高中英文 PDF",
+          "url": "https://www.kusjh.kh.edu.tw/upload/files/114-2-2%E9%AB%98%E4%B8%AD%E8%8B%B1%E6%96%87.pdf"
+        },
+        {
+          "title": "114下第2次｜高中生物 PDF",
+          "url": "https://www.kusjh.kh.edu.tw/upload/files/114-2-2%E9%AB%98%E4%B8%AD%E7%94%9F%E7%89%A9.pdf"
+        },
+        {
+          "title": "114下第2次｜高中物理 PDF",
+          "url": "https://www.kusjh.kh.edu.tw/upload/files/114-2-2%E9%AB%98%E4%B8%AD%E7%89%A9%E7%90%86.pdf"
+        },
+        {
+          "title": "114下第2次｜高中歷史 PDF",
+          "url": "https://www.kusjh.kh.edu.tw/upload/files/114-2-2%E9%AB%98%E4%B8%AD%E6%AD%B7%E5%8F%B2.pdf"
+        },
+        {
+          "title": "114下第2次｜高中數學 PDF",
+          "url": "https://www.kusjh.kh.edu.tw/upload/files/114-2-2%E9%AB%98%E4%B8%AD%E6%95%B8%E5%AD%B8.pdf"
+        },
+        {
+          "title": "114下第2次｜高中地科 PDF",
+          "url": "https://www.kusjh.kh.edu.tw/upload/files/114-2-2%E9%AB%98%E4%B8%AD%E5%9C%B0%E7%A7%91.pdf"
+        },
+        {
+          "title": "114下第2次｜高中地理 PDF",
+          "url": "https://www.kusjh.kh.edu.tw/upload/files/114-2-2%E9%AB%98%E4%B8%AD%E5%9C%B0%E7%90%86.pdf"
+        },
+        {
+          "title": "114下第2次｜高中國文 PDF",
+          "url": "https://www.kusjh.kh.edu.tw/upload/files/114-2-2%E9%AB%98%E4%B8%AD%E5%9C%8B%E6%96%87.pdf"
+        },
+        {
+          "title": "114下第2次｜高中國寫 PDF",
+          "url": "https://www.kusjh.kh.edu.tw/upload/files/114-2-2%E9%AB%98%E4%B8%AD%E5%9C%8B%E5%AF%AB.pdf"
+        },
+        {
+          "title": "114下第2次｜高中化學 PDF",
+          "url": "https://www.kusjh.kh.edu.tw/upload/files/114-2-2%E9%AB%98%E4%B8%AD%E5%8C%96%E5%AD%B8.pdf"
+        },
+        {
+          "title": "114下第2次｜高中公民 PDF",
+          "url": "https://www.kusjh.kh.edu.tw/upload/files/114-2-2%E9%AB%98%E4%B8%AD%E5%85%AC%E6%B0%91.pdf"
+        },
+        {
+          "title": "114下第2次｜高中健護 PDF",
+          "url": "https://www.kusjh.kh.edu.tw/upload/files/114-2-2%E9%AB%98%E4%B8%AD%E5%81%A5%E8%AD%B7.pdf"
+        }
+      ]
     },
     {
-      "id": "kh-xinxing-official", "title": "新興高中｜歷屆段考試題", "provider": "高雄市教育百寶箱（校方公開資料夾）", "category": "校方官方題庫", "schools": ["新興高中"], "coverage": "資料夾索引可見106至114學年度；檔案依學年度分層。", "url": "https://educase.kh.edu.tw/navigate/a/#/s/E51D4D8E663D477288CA032C047DBC63AUY", "status": "公開資料夾；瀏覽器檢視可見學年度分類", "note": "請於原資料夾挑選高中部與適用科目；未確認每一科及答案皆齊全。"
+      "id": "kh-xinxing-official",
+      "title": "新興高中｜歷屆段考試題",
+      "provider": "高雄市教育百寶箱（校方公開資料夾）",
+      "category": "校方官方題庫",
+      "schools": [
+        "新興高中"
+      ],
+      "coverage": "資料夾索引可見106至114學年度；檔案依學年度分層。",
+      "url": "https://educase.kh.edu.tw/navigate/a/#/s/E51D4D8E663D477288CA032C047DBC63AUY",
+      "status": "公開資料夾；瀏覽器檢視可見學年度分類",
+      "note": "請於原資料夾挑選高中部與適用科目；未確認每一科及答案皆齊全。"
     },
     {
-      "id": "kh-xiaogang-official", "title": "小港高中｜歷屆考試題庫", "provider": "高雄市立小港高中（校方）", "category": "校方官方題庫", "schools": ["小港高中"], "coverage": "校方頁面列98至107學年度分類，另提供108學年度至今的公開雲端資料夾。", "url": "https://www.hkhs.kh.edu.tw/ischool/publish_page/11/?cid=124", "status": "公開；學年度入口仍在校方頁面", "note": "較新的試卷連至Google Drive；依原站權限及使用說明下載。"
+      "id": "kh-xiaogang-official",
+      "title": "小港高中｜歷屆考試題庫",
+      "provider": "高雄市立小港高中（校方）",
+      "category": "校方官方題庫",
+      "schools": [
+        "小港高中"
+      ],
+      "coverage": "校方頁面列98至107學年度分類，另提供108學年度至今的公開雲端資料夾。",
+      "url": "https://www.hkhs.kh.edu.tw/ischool/publish_page/11/?cid=124",
+      "status": "公開；學年度入口仍在校方頁面",
+      "note": "較新的試卷連至Google Drive；依原站權限及使用說明下載。"
     },
     {
-      "id": "kh-kghs-chinese", "title": "高雄女中｜國文科月考試題", "provider": "高雄市立高雄女子高級中學（校方）", "category": "校方科別題庫", "schools": ["高雄女中"], "coverage": "國文科月考試題入口；頁面目前顯示月考試題共4個檔案，另分年級導覽。", "url": "https://www.kghs.kh.edu.tw/ischool/publish_page/22/?cid=1663", "status": "公開；科目及檔案數有限", "note": "只覆蓋國文科公開項目，不代表全校各科段考題庫。"
+      "id": "kh-kghs-chinese",
+      "title": "高雄女中｜國文科月考試題",
+      "provider": "高雄市立高雄女子高級中學（校方）",
+      "category": "校方科別題庫",
+      "schools": [
+        "高雄女中"
+      ],
+      "coverage": "國文科月考試題入口；頁面目前顯示月考試題共4個檔案，另分年級導覽。",
+      "url": "https://www.kghs.kh.edu.tw/ischool/publish_page/22/?cid=1663",
+      "status": "公開；科目及檔案數有限",
+      "note": "只覆蓋國文科公開項目，不代表全校各科段考題庫。"
     },
     {
-      "id": "kh-nknush-math", "title": "高師大附中｜數學科高中段考試題", "provider": "國立高雄師範大學附屬高級中學數學科", "category": "校方科別題庫", "schools": ["高師大附中"], "coverage": "依高一、高二、高三分頁的數學科試題。", "url": "https://sites.google.com/tea.nknush.kh.edu.tw/nknush-math/%E9%AB%98%E4%B8%AD%E6%AE%B5%E8%80%83%E8%A9%A6%E9%A1%8C", "status": "公開科別網站", "note": "僅數學科；請檢查試題年份與課綱範圍。"
+      "id": "kh-nknush-math",
+      "title": "高師大附中｜數學科高中段考試題",
+      "provider": "國立高雄師範大學附屬高級中學數學科",
+      "category": "校方科別題庫",
+      "schools": [
+        "高師大附中"
+      ],
+      "coverage": "依高一、高二、高三分頁的數學科試題。",
+      "url": "https://sites.google.com/tea.nknush.kh.edu.tw/nknush-math/%E9%AB%98%E4%B8%AD%E6%AE%B5%E8%80%83%E8%A9%A6%E9%A1%8C",
+      "status": "公開科別網站",
+      "note": "僅數學科；請檢查試題年份與課綱範圍。"
     },
     {
-      "id": "kh-justice-official", "title": "正義高中｜歷屆試題", "provider": "高雄市立正義高級中學（校方教務處）", "category": "校方官方題庫", "schools": ["正義高中"], "coverage": "校方教務處頁面連往公開Google Drive歷屆試題資料夾。", "url": "https://web.cysh.khc.edu.tw/zh/page/2f7f3a51-daf3-4328-e5fd-3a0f54e68e52", "status": "公開校方入口；官方頁最後發佈日期為2023-12-07，雲端檔案更新狀態未確認", "note": "應以原站雲端資料夾實際檔案為準；此項是題庫入口，不表示其涵蓋全部科目與年度。"
+      "id": "kh-justice-official",
+      "title": "正義高中｜歷屆試題",
+      "provider": "高雄市立正義高級中學（校方教務處）",
+      "category": "校方官方題庫",
+      "schools": [
+        "正義高中"
+      ],
+      "coverage": "校方教務處頁面連往公開Google Drive歷屆試題資料夾。",
+      "url": "https://web.cysh.khc.edu.tw/zh/page/2f7f3a51-daf3-4328-e5fd-3a0f54e68e52",
+      "status": "公開校方入口；官方頁最後發佈日期為2023-12-07，雲端檔案更新狀態未確認",
+      "note": "應以原站雲端資料夾實際檔案為準；此項是題庫入口，不表示其涵蓋全部科目與年度。"
     },
     {
-      "id": "kh-fengxin-114-math", "title": "鳳新高中114上高一第一次段考｜數學試題、答案與詳解", "provider": "御藍教育（第三方整理）", "category": "公開試卷與詳解", "schools": ["鳳新高中"], "coverage": "114學年度上學期、高一、數學；原卷18題，頁面提供答案與逐題詳解及PDF下載。", "url": "https://www.royalblue-education.com/school-exams/fhsh-114a-g10-1", "status": "公開；單一試卷頁已查閱", "note": "非校方網站。題目由第三方重新排版；在第三方原站閱讀／下載，本站不複製或重新託管。"
+      "id": "kh-fengxin-114-math",
+      "title": "鳳新高中114上高一第一次段考｜數學試題、答案與詳解",
+      "provider": "御藍教育（第三方整理）",
+      "category": "公開試卷與詳解",
+      "schools": [
+        "鳳新高中"
+      ],
+      "coverage": "114學年度上學期、高一、數學；頁面提供原卷18題、答案、逐題詳解及PDF下載。",
+      "url": "https://www.royalblue-education.com/school-exams/fhsh-114a-g10-1",
+      "status": "公開；單一試卷頁已查閱",
+      "note": "非校方網站。題目由第三方重新排版；在第三方原站閱讀／下載，本站不複製或重新託管。",
+      "actionLabel": "看試題／答案並下載 PDF ↗"
     },
     {
-      "id": "kh-chunyi-113", "title": "高雄區113學年度高中段考試題整理", "provider": "群翊數學（教師整理）", "category": "區域彙整／原始雲端連結", "schools": ["高雄區各校"], "coverage": "113學年度多校段考連結，按學期、年級、考次列出，連往OneDrive原始試卷。", "url": "https://chun-yi-math.com/2026/07/08/%E6%AE%B5%E8%80%83%E8%A9%A6%E9%A1%8C113%E5%AD%B8%E5%B9%B4%E9%AB%98%E9%9B%84%E5%8D%80/", "status": "公開；學年度為113，並非最新年度", "note": "較方便查找未建立獨立校方入口的學校；每份檔案請回到提供者頁面確認來源、年份及答案。"
+      "id": "kh-chunyi-113",
+      "title": "高雄區113學年度高中段考試題整理",
+      "provider": "群翊數學（教師整理）",
+      "category": "區域彙整／原始雲端連結",
+      "schools": [
+        "高雄區各校"
+      ],
+      "coverage": "113學年度多校段考連結，按學期、年級、考次列出，連往OneDrive原始試卷。",
+      "url": "https://chun-yi-math.com/2026/07/08/%E6%AE%B5%E8%80%83%E8%A9%A6%E9%A1%8C113%E5%AD%B8%E5%B9%B4%E9%AB%98%E9%9B%84%E5%8D%80/",
+      "status": "公開；學年度為113，並非最新年度",
+      "note": "較方便查找未建立獨立校方入口的學校；每份檔案請回到提供者頁面確認來源、年份及答案。"
     },
     {
-      "id": "kh-strongmath-directory", "title": "思壯文教｜高雄高中段考題連結整理", "provider": "思壯文教（彙整目錄）", "category": "區域索引／外部連結", "schools": ["高雄區各校"], "coverage": "索引目前列新興高中、鳳山高中、小港高中三個公開入口，連回校方或公開資料夾。", "url": "https://strongmathen.com/exams/kaohsiung/", "status": "公開索引；不是試卷本身", "note": "連結由第三方彙整，下載權限及內容以各校原站為準。"
+      "id": "kh-strongmath-directory",
+      "title": "思壯文教｜高雄高中段考題連結整理",
+      "provider": "思壯文教（彙整目錄）",
+      "category": "區域索引／外部連結",
+      "schools": [
+        "高雄區各校"
+      ],
+      "coverage": "索引目前列新興高中、鳳山高中、小港高中三個公開入口，連回校方或公開資料夾。",
+      "url": "https://strongmathen.com/exams/kaohsiung/",
+      "status": "公開索引；不是試卷本身",
+      "note": "連結由第三方彙整，下載權限及內容以各校原站為準。"
     },
     {
-      "id": "kh-tkb-directory", "title": "TKB｜高中段考考古題整理與公開狀態", "provider": "TKB國高中（資訊整理）", "category": "全臺題庫索引", "schools": ["高雄區各校"], "coverage": "2026年9月更新的高中段考題庫索引，列出高雄正義高中、高師大附中數學、高雄女中國文等官方入口與狀態。", "url": "https://www.tkbgo.com.tw/schoolZone/university/article/toDetail?article_id=1711", "status": "公開索引；非原始試卷", "note": "適合繼續發現學校入口；需登入的資源僅供有校方授權者使用。"
+      "id": "kh-tkb-directory",
+      "title": "TKB｜高中段考考古題整理與公開狀態",
+      "provider": "TKB國高中（資訊整理）",
+      "category": "全臺題庫索引",
+      "schools": [
+        "高雄區各校"
+      ],
+      "coverage": "2026年9月更新的高中段考題庫索引，列出高雄正義高中、高師大附中數學、高雄女中國文等官方入口與狀態。",
+      "url": "https://www.tkbgo.com.tw/schoolZone/university/article/toDetail?article_id=1711",
+      "status": "公開索引；非原始試卷",
+      "note": "適合繼續發現學校入口；需登入的資源僅供有校方授權者使用。"
     },
     {
-      "id": "kh-928-directory", "title": "928教育王國｜國高中各校歷屆考古題", "provider": "928教育王國（資訊整理）", "category": "全臺題庫索引", "schools": ["高雄區各校"], "coverage": "列高中大考中心及高雄鼓山、新興、小港等校方題庫入口。", "url": "https://928education.com/listing/past-exam-student/", "status": "公開索引；頁面標示2024-12-09", "note": "此頁僅提供入口，試卷應由原始學校或機構下載。"
+      "id": "kh-928-directory",
+      "title": "928教育王國｜國高中各校歷屆考古題",
+      "provider": "928教育王國（資訊整理）",
+      "category": "全臺題庫索引",
+      "schools": [
+        "高雄區各校"
+      ],
+      "coverage": "列高中大考中心及高雄鼓山、新興、小港等校方題庫入口。",
+      "url": "https://928education.com/listing/past-exam-student/",
+      "status": "公開索引；頁面標示2024-12-09",
+      "note": "此頁僅提供入口，試卷應由原始學校或機構下載。"
     },
     {
-      "id": "kh-exambank", "title": "ExamBank｜高中歷屆考卷搜尋", "provider": "ExamBank（第三方題庫）", "category": "第三方題庫／只列人工瀏覽入口", "schools": ["高雄區各校"], "coverage": "可搜尋全臺國高中題卷；個別學校與年份需在站內查詢。", "url": "https://exambank.darrenlu.com/", "status": "可人工瀏覽；不自動大量下載", "note": "使用條款禁止自動化工具大量下載；本站只連結，不抓取或鏡像內容。條款：https://exambank.darrenlu.com/terms。"
+      "id": "ceec-gsat",
+      "title": "大考中心｜學測歷年試題與答案",
+      "provider": "大學入學考試中心（官方）",
+      "category": "全國升學考試",
+      "schools": [
+        "全國學測"
+      ],
+      "coverage": "111至115學年度；本APP離線題庫已收錄133份官方PDF。",
+      "url": "https://www.ceec.edu.tw/xmfile?xsmsid=0J052424829869345634",
+      "status": "官方公開；本APP內建PDF可離線閱讀",
+      "note": "學測試題不是校內段考題；原始來源為大考中心。"
     },
     {
-      "id": "ceec-gsat", "title": "大考中心｜學測歷年試題與答案", "provider": "大學入學考試中心（官方）", "category": "全國升學考試", "schools": ["全國學測"], "coverage": "111至115學年度；本APP離線題庫已收錄133份官方PDF。", "url": "https://www.ceec.edu.tw/xmfile?xsmsid=0J052424829869345634", "status": "官方公開；本APP內建PDF可離線閱讀", "note": "學測試題不是校內段考題；原始來源為大考中心。"
+      "id": "royalblue-kshs-114a-g10-1",
+      "title": "高雄中學｜114上高一第一次段考數學試題（18題）",
+      "provider": "御藍教育（第三方整理）",
+      "category": "公開試卷與詳解",
+      "schools": [
+        "高雄中學"
+      ],
+      "coverage": "114學年度上學期、高一、數學；頁面索引列18題並提供答案、詳解及PDF下載。",
+      "url": "https://www.royalblue-education.com/school-exams/kshs-114a-g10-1",
+      "actionLabel": "看試題／答案並下載 PDF ↗",
+      "status": "公開試題頁；由提供者原站閱讀／下載",
+      "note": "第三方重新排版與解題；本APP只連到原站，不鏡像試卷，且尚未匯入自動批改題庫。"
+    },
+    {
+      "id": "royalblue-kghs-114a-g10-1",
+      "title": "高雄女中｜114上高一第一次段考數學試題（28題）",
+      "provider": "御藍教育（第三方整理）",
+      "category": "公開試卷與詳解",
+      "schools": [
+        "高雄女中"
+      ],
+      "coverage": "114學年度上學期、高一、數學；頁面索引列28題並提供答案、詳解及PDF下載。",
+      "url": "https://www.royalblue-education.com/school-exams/kghs-114a-g10-1",
+      "actionLabel": "看試題／答案並下載 PDF ↗",
+      "status": "公開試題頁；由提供者原站閱讀／下載",
+      "note": "第三方重新排版與解題；本APP只連到原站，不鏡像試卷，且尚未匯入自動批改題庫。"
+    },
+    {
+      "id": "royalblue-nknush-114a-g10-1",
+      "title": "高師大附中｜114上高一第一次段考數學試題（17題）",
+      "provider": "御藍教育（第三方整理）",
+      "category": "公開試卷與詳解",
+      "schools": [
+        "高師大附中"
+      ],
+      "coverage": "114學年度上學期、高一、數學；頁面索引列17題並提供答案、詳解及PDF下載。",
+      "url": "https://www.royalblue-education.com/school-exams/nknush-114a-g10-1",
+      "actionLabel": "看試題／答案並下載 PDF ↗",
+      "status": "公開試題頁；由提供者原站閱讀／下載",
+      "note": "第三方重新排版與解題；本APP只連到原站，不鏡像試卷，且尚未匯入自動批改題庫。"
+    },
+    {
+      "id": "royalblue-fssh-114a-g10-1",
+      "title": "鳳山高中｜114上高一第一次段考數學試題（18題）",
+      "provider": "御藍教育（第三方整理）",
+      "category": "公開試卷與詳解",
+      "schools": [
+        "鳳山高中"
+      ],
+      "coverage": "114學年度上學期、高一、數學；頁面索引列18題並提供答案、詳解及PDF下載。",
+      "url": "https://www.royalblue-education.com/school-exams/fssh-114a-g10-1",
+      "actionLabel": "看試題／答案並下載 PDF ↗",
+      "status": "公開試題頁；由提供者原站閱讀／下載",
+      "note": "第三方重新排版與解題；本APP只連到原站，不鏡像試卷，且尚未匯入自動批改題庫。"
+    },
+    {
+      "id": "royalblue-rssh-114a-g10-1",
+      "title": "瑞祥高中｜114上高一第一次段考數學試題（16題）",
+      "provider": "御藍教育（第三方整理）",
+      "category": "公開試卷與詳解",
+      "schools": [
+        "瑞祥高中"
+      ],
+      "coverage": "114學年度上學期、高一、數學；頁面索引列16題並提供答案、詳解及PDF下載。",
+      "url": "https://www.royalblue-education.com/school-exams/rssh-114a-g10-1",
+      "actionLabel": "看試題／答案並下載 PDF ↗",
+      "status": "公開試題頁；由提供者原站閱讀／下載",
+      "note": "第三方重新排版與解題；本APP只連到原站，不鏡像試卷，且尚未匯入自動批改題庫。"
+    },
+    {
+      "id": "royalblue-hkhs-114a-g10-1",
+      "title": "小港高中｜114上高一第一次段考數學試題（17題）",
+      "provider": "御藍教育（第三方整理）",
+      "category": "公開試卷與詳解",
+      "schools": [
+        "小港高中"
+      ],
+      "coverage": "114學年度上學期、高一、數學；頁面索引列17題並提供答案、詳解及PDF下載。",
+      "url": "https://www.royalblue-education.com/school-exams/hkhs-114a-g10-1",
+      "actionLabel": "看試題／答案並下載 PDF ↗",
+      "status": "公開試題頁；由提供者原站閱讀／下載",
+      "note": "第三方重新排版與解題；本APP只連到原站，不鏡像試卷，且尚未匯入自動批改題庫。"
+    },
+    {
+      "id": "royalblue-kssh-114a-g10-1",
+      "title": "岡山高中｜114上高一第一次段考數學試題（20題）",
+      "provider": "御藍教育（第三方整理）",
+      "category": "公開試卷與詳解",
+      "schools": [
+        "岡山高中"
+      ],
+      "coverage": "114學年度上學期、高一、數學；頁面索引列20題並提供答案、詳解及PDF下載。",
+      "url": "https://www.royalblue-education.com/school-exams/kssh-114a-g10-1",
+      "actionLabel": "看試題／答案並下載 PDF ↗",
+      "status": "公開試題頁；由提供者原站閱讀／下載",
+      "note": "第三方重新排版與解題；本APP只連到原站，不鏡像試卷，且尚未匯入自動批改題庫。"
+    },
+    {
+      "id": "royalblue-dmhs-114a-g10-1",
+      "title": "道明中學｜114上高一第一次段考數學試題（18題）",
+      "provider": "御藍教育（第三方整理）",
+      "category": "公開試卷與詳解",
+      "schools": [
+        "道明中學"
+      ],
+      "coverage": "114學年度上學期、高一、數學；頁面索引列18題並提供答案、詳解及PDF下載。",
+      "url": "https://www.royalblue-education.com/school-exams/dmhs-114a-g10-1",
+      "actionLabel": "看試題／答案並下載 PDF ↗",
+      "status": "公開試題頁；由提供者原站閱讀／下載",
+      "note": "第三方重新排版與解題；本APP只連到原站，不鏡像試卷，且尚未匯入自動批改題庫。"
+    },
+    {
+      "id": "royalblue-cshs-114a-g10-1",
+      "title": "中山高中｜114上高一第一次段考數學試題（20題）",
+      "provider": "御藍教育（第三方整理）",
+      "category": "公開試卷與詳解",
+      "schools": [
+        "中山高中"
+      ],
+      "coverage": "114學年度上學期、高一、數學；頁面索引列20題並提供答案、詳解及PDF下載。",
+      "url": "https://www.royalblue-education.com/school-exams/cshs-114a-g10-1",
+      "actionLabel": "看試題／答案並下載 PDF ↗",
+      "status": "公開試題頁；由提供者原站閱讀／下載",
+      "note": "第三方重新排版與解題；本APP只連到原站，不鏡像試卷，且尚未匯入自動批改題庫。"
+    },
+    {
+      "id": "royalblue-nsysush-114a-g10-1",
+      "title": "中山大學附屬國光高中｜114上高一第一次段考數學試題（15題）",
+      "provider": "御藍教育（第三方整理）",
+      "category": "公開試卷與詳解",
+      "schools": [
+        "中山大學附屬國光高中"
+      ],
+      "coverage": "114學年度上學期、高一、數學；頁面索引列15題並提供答案、詳解及PDF下載。",
+      "url": "https://www.royalblue-education.com/school-exams/nsysush-114a-g10-1",
+      "actionLabel": "看試題／答案並下載 PDF ↗",
+      "status": "公開試題頁；由提供者原站閱讀／下載",
+      "note": "第三方重新排版與解題；本APP只連到原站，不鏡像試卷，且尚未匯入自動批改題庫。"
+    },
+    {
+      "id": "royalblue-tyhs-114a-g10-1",
+      "title": "左營高中｜114上高一第一次段考數學試題（26題）",
+      "provider": "御藍教育（第三方整理）",
+      "category": "公開試卷與詳解",
+      "schools": [
+        "左營高中"
+      ],
+      "coverage": "114學年度上學期、高一、數學；頁面索引列26題並提供答案、詳解及PDF下載。",
+      "url": "https://www.royalblue-education.com/school-exams/tyhs-114a-g10-1",
+      "actionLabel": "看試題／答案並下載 PDF ↗",
+      "status": "公開試題頁；由提供者原站閱讀／下載",
+      "note": "第三方重新排版與解題；本APP只連到原站，不鏡像試卷，且尚未匯入自動批改題庫。"
+    },
+    {
+      "id": "royalblue-khhcsh-114a-g10-1",
+      "title": "新莊高中｜114上高一第一次段考數學試題（23題）",
+      "provider": "御藍教育（第三方整理）",
+      "category": "公開試卷與詳解",
+      "schools": [
+        "新莊高中"
+      ],
+      "coverage": "114學年度上學期、高一、數學；頁面索引列23題並提供答案、詳解及PDF下載。",
+      "url": "https://www.royalblue-education.com/school-exams/khhcsh-114a-g10-1",
+      "actionLabel": "看試題／答案並下載 PDF ↗",
+      "status": "公開試題頁；由提供者原站閱讀／下載",
+      "note": "第三方重新排版與解題；本APP只連到原站，不鏡像試卷，且尚未匯入自動批改題庫。"
+    },
+    {
+      "id": "royalblue-smhs-114a-g10-1",
+      "title": "三民高中｜114上高一第一次段考數學試題（20題）",
+      "provider": "御藍教育（第三方整理）",
+      "category": "公開試卷與詳解",
+      "schools": [
+        "三民高中"
+      ],
+      "coverage": "114學年度上學期、高一、數學；頁面索引列20題並提供答案、詳解及PDF下載。",
+      "url": "https://www.royalblue-education.com/school-exams/smhs-114a-g10-1",
+      "actionLabel": "看試題／答案並下載 PDF ↗",
+      "status": "公開試題頁；由提供者原站閱讀／下載",
+      "note": "第三方重新排版與解題；本APP只連到原站，不鏡像試卷，且尚未匯入自動批改題庫。"
+    },
+    {
+      "id": "royalblue-hhhs-114a-g10-1",
+      "title": "新興高中｜114上高一第一次段考數學試題（24題）",
+      "provider": "御藍教育（第三方整理）",
+      "category": "公開試卷與詳解",
+      "schools": [
+        "新興高中"
+      ],
+      "coverage": "114學年度上學期、高一、數學；頁面索引列24題並提供答案、詳解及PDF下載。",
+      "url": "https://www.royalblue-education.com/school-exams/hhhs-114a-g10-1",
+      "actionLabel": "看試題／答案並下載 PDF ↗",
+      "status": "公開試題頁；由提供者原站閱讀／下載",
+      "note": "第三方重新排版與解題；本APP只連到原站，不鏡像試卷，且尚未匯入自動批改題庫。"
+    },
+    {
+      "id": "royalblue-cjhs-114a-g10-1",
+      "title": "前鎮高中｜114上高一第一次段考數學試題（22題）",
+      "provider": "御藍教育（第三方整理）",
+      "category": "公開試卷與詳解",
+      "schools": [
+        "前鎮高中"
+      ],
+      "coverage": "114學年度上學期、高一、數學；頁面索引列22題並提供答案、詳解及PDF下載。",
+      "url": "https://www.royalblue-education.com/school-exams/cjhs-114a-g10-1",
+      "actionLabel": "看試題／答案並下載 PDF ↗",
+      "status": "公開試題頁；由提供者原站閱讀／下載",
+      "note": "第三方重新排版與解題；本APP只連到原站，不鏡像試卷，且尚未匯入自動批改題庫。"
+    },
+    {
+      "id": "royalblue-fcsh-114a-g10-1",
+      "title": "福誠高中｜114上高一第一次段考數學試題（20題）",
+      "provider": "御藍教育（第三方整理）",
+      "category": "公開試卷與詳解",
+      "schools": [
+        "福誠高中"
+      ],
+      "coverage": "114學年度上學期、高一、數學；頁面索引列20題並提供答案、詳解及PDF下載。",
+      "url": "https://www.royalblue-education.com/school-exams/fcsh-114a-g10-1",
+      "actionLabel": "看試題／答案並下載 PDF ↗",
+      "status": "公開試題頁；由提供者原站閱讀／下載",
+      "note": "第三方重新排版與解題；本APP只連到原站，不鏡像試卷，且尚未匯入自動批改題庫。"
+    },
+    {
+      "id": "royalblue-kghs-113a-g10-1",
+      "title": "高雄女中｜113上高一數學第一次段考（25題）",
+      "provider": "御藍教育（第三方整理）",
+      "category": "公開試卷與詳解",
+      "schools": [
+        "高雄女中"
+      ],
+      "coverage": "113學年度上學期、高一數學；頁面索引列25題並提供答案、詳解及PDF下載。",
+      "url": "https://www.royalblue-education.com/school-exams/kghs-113a-g10-1",
+      "actionLabel": "看試題／答案並下載 PDF ↗",
+      "status": "公開試題頁；由提供者原站閱讀／下載",
+      "note": "第三方重新排版與解題；本APP只連到原站，不鏡像試卷，且尚未匯入自動批改題庫。"
+    },
+    {
+      "id": "royalblue-kshs-114a-g11a-1",
+      "title": "高雄中學｜114上高二數學A自然組第一次段考（14題）",
+      "provider": "御藍教育（第三方整理）",
+      "category": "公開試卷與詳解",
+      "schools": [
+        "高雄中學"
+      ],
+      "coverage": "114學年度上學期、高二數學A自然組；頁面索引列14題並提供答案、詳解及PDF下載。",
+      "url": "https://www.royalblue-education.com/school-exams/kshs-114a-g11a-1",
+      "actionLabel": "看試題／答案並下載 PDF ↗",
+      "status": "公開試題頁；由提供者原站閱讀／下載",
+      "note": "第三方重新排版與解題；本APP只連到原站，不鏡像試卷，且尚未匯入自動批改題庫。"
+    },
+    {
+      "id": "royalblue-kshs-114a-g11a-soc-1",
+      "title": "高雄中學｜114上高二數學A社會組第一次段考（15題）",
+      "provider": "御藍教育（第三方整理）",
+      "category": "公開試卷與詳解",
+      "schools": [
+        "高雄中學"
+      ],
+      "coverage": "114學年度上學期、高二數學A社會組；頁面索引列15題並提供答案、詳解及PDF下載。",
+      "url": "https://www.royalblue-education.com/school-exams/kshs-114a-g11a-soc-1",
+      "actionLabel": "看試題／答案並下載 PDF ↗",
+      "status": "公開試題頁；由提供者原站閱讀／下載",
+      "note": "第三方重新排版與解題；本APP只連到原站，不鏡像試卷，且尚未匯入自動批改題庫。"
+    },
+    {
+      "id": "royalblue-kghs-114a-g11a-1",
+      "title": "高雄女中｜114上高二數學A第一次段考（23題）",
+      "provider": "御藍教育（第三方整理）",
+      "category": "公開試卷與詳解",
+      "schools": [
+        "高雄女中"
+      ],
+      "coverage": "114學年度上學期、高二數學A；頁面索引列23題並提供答案、詳解及PDF下載。",
+      "url": "https://www.royalblue-education.com/school-exams/kghs-114a-g11a-1",
+      "actionLabel": "看試題／答案並下載 PDF ↗",
+      "status": "公開試題頁；由提供者原站閱讀／下載",
+      "note": "第三方重新排版與解題；本APP只連到原站，不鏡像試卷，且尚未匯入自動批改題庫。"
+    },
+    {
+      "id": "royalblue-nknush-114a-g11a-1",
+      "title": "高師大附中｜114上高二數學A第一次段考（15題）",
+      "provider": "御藍教育（第三方整理）",
+      "category": "公開試卷與詳解",
+      "schools": [
+        "高師大附中"
+      ],
+      "coverage": "114學年度上學期、高二數學A；頁面索引列15題並提供答案、詳解及PDF下載。",
+      "url": "https://www.royalblue-education.com/school-exams/nknush-114a-g11a-1",
+      "actionLabel": "看試題／答案並下載 PDF ↗",
+      "status": "公開試題頁；由提供者原站閱讀／下載",
+      "note": "第三方重新排版與解題；本APP只連到原站，不鏡像試卷，且尚未匯入自動批改題庫。"
+    },
+    {
+      "id": "royalblue-nknush-114a-g11b-1",
+      "title": "高師大附中｜114上高二數學B第一次段考（18題）",
+      "provider": "御藍教育（第三方整理）",
+      "category": "公開試卷與詳解",
+      "schools": [
+        "高師大附中"
+      ],
+      "coverage": "114學年度上學期、高二數學B；頁面索引列18題並提供答案、詳解及PDF下載。",
+      "url": "https://www.royalblue-education.com/school-exams/nknush-114a-g11b-1",
+      "actionLabel": "看試題／答案並下載 PDF ↗",
+      "status": "公開試題頁；由提供者原站閱讀／下載",
+      "note": "第三方重新排版與解題；本APP只連到原站，不鏡像試卷，且尚未匯入自動批改題庫。"
+    },
+    {
+      "id": "royalblue-fssh-114a-g11a-1",
+      "title": "鳳山高中｜114上高二數學A第一次段考（17題）",
+      "provider": "御藍教育（第三方整理）",
+      "category": "公開試卷與詳解",
+      "schools": [
+        "鳳山高中"
+      ],
+      "coverage": "114學年度上學期、高二數學A；頁面索引列17題並提供答案、詳解及PDF下載。",
+      "url": "https://www.royalblue-education.com/school-exams/fssh-114a-g11a-1",
+      "actionLabel": "看試題／答案並下載 PDF ↗",
+      "status": "公開試題頁；由提供者原站閱讀／下載",
+      "note": "第三方重新排版與解題；本APP只連到原站，不鏡像試卷，且尚未匯入自動批改題庫。"
+    },
+    {
+      "id": "royalblue-fhsh-114a-g11a-1",
+      "title": "鳳新高中｜114上高二數學A第一次段考（15題）",
+      "provider": "御藍教育（第三方整理）",
+      "category": "公開試卷與詳解",
+      "schools": [
+        "鳳新高中"
+      ],
+      "coverage": "114學年度上學期、高二數學A；頁面索引列15題並提供答案、詳解及PDF下載。",
+      "url": "https://www.royalblue-education.com/school-exams/fhsh-114a-g11a-1",
+      "actionLabel": "看試題／答案並下載 PDF ↗",
+      "status": "公開試題頁；由提供者原站閱讀／下載",
+      "note": "第三方重新排版與解題；本APP只連到原站，不鏡像試卷，且尚未匯入自動批改題庫。"
+    },
+    {
+      "id": "royalblue-rssh-114a-g11a-1",
+      "title": "瑞祥高中｜114上高二數學A第一次段考（21題）",
+      "provider": "御藍教育（第三方整理）",
+      "category": "公開試卷與詳解",
+      "schools": [
+        "瑞祥高中"
+      ],
+      "coverage": "114學年度上學期、高二數學A；頁面索引列21題並提供答案、詳解及PDF下載。",
+      "url": "https://www.royalblue-education.com/school-exams/rssh-114a-g11a-1",
+      "actionLabel": "看試題／答案並下載 PDF ↗",
+      "status": "公開試題頁；由提供者原站閱讀／下載",
+      "note": "第三方重新排版與解題；本APP只連到原站，不鏡像試卷，且尚未匯入自動批改題庫。"
+    },
+    {
+      "id": "royalblue-cchs-114a-g11a-1",
+      "title": "中正高中｜114上高二數學A第一次段考（15題）",
+      "provider": "御藍教育（第三方整理）",
+      "category": "公開試卷與詳解",
+      "schools": [
+        "中正高中"
+      ],
+      "coverage": "114學年度上學期、高二數學A；頁面索引列15題並提供答案、詳解及PDF下載。",
+      "url": "https://www.royalblue-education.com/school-exams/cchs-114a-g11a-1",
+      "actionLabel": "看試題／答案並下載 PDF ↗",
+      "status": "公開試題頁；由提供者原站閱讀／下載",
+      "note": "第三方重新排版與解題；本APP只連到原站，不鏡像試卷，且尚未匯入自動批改題庫。"
+    },
+    {
+      "id": "royalblue-hkhs-114a-g11a-1",
+      "title": "小港高中｜114上高二數學A第一次段考（16題）",
+      "provider": "御藍教育（第三方整理）",
+      "category": "公開試卷與詳解",
+      "schools": [
+        "小港高中"
+      ],
+      "coverage": "114學年度上學期、高二數學A；頁面索引列16題並提供答案、詳解及PDF下載。",
+      "url": "https://www.royalblue-education.com/school-exams/hkhs-114a-g11a-1",
+      "actionLabel": "看試題／答案並下載 PDF ↗",
+      "status": "公開試題頁；由提供者原站閱讀／下載",
+      "note": "第三方重新排版與解題；本APP只連到原站，不鏡像試卷，且尚未匯入自動批改題庫。"
+    },
+    {
+      "id": "royalblue-kssh-114a-g11a-1",
+      "title": "岡山高中｜114上高二數學A第一次段考（25題）",
+      "provider": "御藍教育（第三方整理）",
+      "category": "公開試卷與詳解",
+      "schools": [
+        "岡山高中"
+      ],
+      "coverage": "114學年度上學期、高二數學A；頁面索引列25題並提供答案、詳解及PDF下載。",
+      "url": "https://www.royalblue-education.com/school-exams/kssh-114a-g11a-1",
+      "actionLabel": "看試題／答案並下載 PDF ↗",
+      "status": "公開試題頁；由提供者原站閱讀／下載",
+      "note": "第三方重新排版與解題；本APP只連到原站，不鏡像試卷，且尚未匯入自動批改題庫。"
+    },
+    {
+      "id": "royalblue-dmhs-114a-g11a-1",
+      "title": "道明中學｜114上高二數學A第一次段考（14題）",
+      "provider": "御藍教育（第三方整理）",
+      "category": "公開試卷與詳解",
+      "schools": [
+        "道明中學"
+      ],
+      "coverage": "114學年度上學期、高二數學A；頁面索引列14題並提供答案、詳解及PDF下載。",
+      "url": "https://www.royalblue-education.com/school-exams/dmhs-114a-g11a-1",
+      "actionLabel": "看試題／答案並下載 PDF ↗",
+      "status": "公開試題頁；由提供者原站閱讀／下載",
+      "note": "第三方重新排版與解題；本APP只連到原站，不鏡像試卷，且尚未匯入自動批改題庫。"
+    },
+    {
+      "id": "royalblue-cshs-114a-g11a-1",
+      "title": "中山高中｜114上高二數學A第一次段考（20題）",
+      "provider": "御藍教育（第三方整理）",
+      "category": "公開試卷與詳解",
+      "schools": [
+        "中山高中"
+      ],
+      "coverage": "114學年度上學期、高二數學A；頁面索引列20題並提供答案、詳解及PDF下載。",
+      "url": "https://www.royalblue-education.com/school-exams/cshs-114a-g11a-1",
+      "actionLabel": "看試題／答案並下載 PDF ↗",
+      "status": "公開試題頁；由提供者原站閱讀／下載",
+      "note": "第三方重新排版與解題；本APP只連到原站，不鏡像試卷，且尚未匯入自動批改題庫。"
+    },
+    {
+      "id": "royalblue-nsysush-114a-g11a-1",
+      "title": "中山大學附屬國光高中｜114上高二數學A第一次段考（17題）",
+      "provider": "御藍教育（第三方整理）",
+      "category": "公開試卷與詳解",
+      "schools": [
+        "中山大學附屬國光高中"
+      ],
+      "coverage": "114學年度上學期、高二數學A；頁面索引列17題並提供答案、詳解及PDF下載。",
+      "url": "https://www.royalblue-education.com/school-exams/nsysush-114a-g11a-1",
+      "actionLabel": "看試題／答案並下載 PDF ↗",
+      "status": "公開試題頁；由提供者原站閱讀／下載",
+      "note": "第三方重新排版與解題；本APP只連到原站，不鏡像試卷，且尚未匯入自動批改題庫。"
+    },
+    {
+      "id": "royalblue-tyhs-114a-g11a-1",
+      "title": "左營高中｜114上高二數學A第一次段考（22題）",
+      "provider": "御藍教育（第三方整理）",
+      "category": "公開試卷與詳解",
+      "schools": [
+        "左營高中"
+      ],
+      "coverage": "114學年度上學期、高二數學A；頁面索引列22題並提供答案、詳解及PDF下載。",
+      "url": "https://www.royalblue-education.com/school-exams/tyhs-114a-g11a-1",
+      "actionLabel": "看試題／答案並下載 PDF ↗",
+      "status": "公開試題頁；由提供者原站閱讀／下載",
+      "note": "第三方重新排版與解題；本APP只連到原站，不鏡像試卷，且尚未匯入自動批改題庫。"
+    },
+    {
+      "id": "royalblue-smhs-114a-g11a-1",
+      "title": "三民高中｜114上高二數學A第一次段考（16題）",
+      "provider": "御藍教育（第三方整理）",
+      "category": "公開試卷與詳解",
+      "schools": [
+        "三民高中"
+      ],
+      "coverage": "114學年度上學期、高二數學A；頁面索引列16題並提供答案、詳解及PDF下載。",
+      "url": "https://www.royalblue-education.com/school-exams/smhs-114a-g11a-1",
+      "actionLabel": "看試題／答案並下載 PDF ↗",
+      "status": "公開試題頁；由提供者原站閱讀／下載",
+      "note": "第三方重新排版與解題；本APP只連到原站，不鏡像試卷，且尚未匯入自動批改題庫。"
+    },
+    {
+      "id": "royalblue-cjhs-114a-g11a-1",
+      "title": "前鎮高中｜114上高二數學A第一次段考（21題）",
+      "provider": "御藍教育（第三方整理）",
+      "category": "公開試卷與詳解",
+      "schools": [
+        "前鎮高中"
+      ],
+      "coverage": "114學年度上學期、高二數學A；頁面索引列21題並提供答案、詳解及PDF下載。",
+      "url": "https://www.royalblue-education.com/school-exams/cjhs-114a-g11a-1",
+      "actionLabel": "看試題／答案並下載 PDF ↗",
+      "status": "公開試題頁；由提供者原站閱讀／下載",
+      "note": "第三方重新排版與解題；本APP只連到原站，不鏡像試卷，且尚未匯入自動批改題庫。"
+    },
+    {
+      "id": "royalblue-fcsh-114a-g11a-1",
+      "title": "福誠高中｜114上高二數學A第一次段考（24題）",
+      "provider": "御藍教育（第三方整理）",
+      "category": "公開試卷與詳解",
+      "schools": [
+        "福誠高中"
+      ],
+      "coverage": "114學年度上學期、高二數學A；頁面索引列24題並提供答案、詳解及PDF下載。",
+      "url": "https://www.royalblue-education.com/school-exams/fcsh-114a-g11a-1",
+      "actionLabel": "看試題／答案並下載 PDF ↗",
+      "status": "公開試題頁；由提供者原站閱讀／下載",
+      "note": "第三方重新排版與解題；本APP只連到原站，不鏡像試卷，且尚未匯入自動批改題庫。"
+    },
+    {
+      "id": "royalblue-nknush-114a-g12jia-1",
+      "title": "高師大附中｜114上高三數甲第一次段考（18題）",
+      "provider": "御藍教育（第三方整理）",
+      "category": "公開試卷與詳解",
+      "schools": [
+        "高師大附中"
+      ],
+      "coverage": "114學年度上學期、高三數甲；頁面索引列18題並提供答案、詳解及PDF下載。",
+      "url": "https://www.royalblue-education.com/school-exams/nknush-114a-g12jia-1",
+      "actionLabel": "看試題／答案並下載 PDF ↗",
+      "status": "公開試題頁；由提供者原站閱讀／下載",
+      "note": "第三方重新排版與解題；本APP只連到原站，不鏡像試卷，且尚未匯入自動批改題庫。"
+    },
+    {
+      "id": "royalblue-gshs-114a-g12jia-1",
+      "title": "鼓山高中｜114上高三數甲第一次段考（18題）",
+      "provider": "御藍教育（第三方整理）",
+      "category": "公開試卷與詳解",
+      "schools": [
+        "鼓山高中"
+      ],
+      "coverage": "114學年度上學期、高三數甲；頁面索引列18題並提供答案、詳解及PDF下載。",
+      "url": "https://www.royalblue-education.com/school-exams/gshs-114a-g12jia-1",
+      "actionLabel": "看試題／答案並下載 PDF ↗",
+      "status": "公開試題頁；由提供者原站閱讀／下載",
+      "note": "第三方重新排版與解題；本APP只連到原站，不鏡像試卷，且尚未匯入自動批改題庫。"
+    },
+    {
+      "id": "royalblue-gshs-114a-g12yi-1",
+      "title": "鼓山高中｜114上高三數乙第一次段考（18題）",
+      "provider": "御藍教育（第三方整理）",
+      "category": "公開試卷與詳解",
+      "schools": [
+        "鼓山高中"
+      ],
+      "coverage": "114學年度上學期、高三數乙；頁面索引列18題並提供答案、詳解及PDF下載。",
+      "url": "https://www.royalblue-education.com/school-exams/gshs-114a-g12yi-1",
+      "actionLabel": "看試題／答案並下載 PDF ↗",
+      "status": "公開試題頁；由提供者原站閱讀／下載",
+      "note": "第三方重新排版與解題；本APP只連到原站，不鏡像試卷，且尚未匯入自動批改題庫。"
     }
   ]
 }
