@@ -12,8 +12,8 @@
 | `appsscript.json` | 台灣時區及最少必要的 Apps Script 權限宣告 |
 | `高雄高中歷屆考題範本.csv` | 17 欄空白歷屆題範本，不含假歷屆試題 |
 | `高雄高中學校名錄.csv` / `schools.json` | 47 校常用選項；非完整或即時官方名錄 |
-| `pdf-catalog.json` | 網頁內建 PDF 目錄；目前尚無 ExamBank PDF |
-| `tools/import_pdf_archive.py` | 將自行下載或獲准使用的本機 PDF 資料包加入網頁 |
+| `pdf-catalog.json` | 網頁內建 PDF 目錄：目前包含 111–115 學年度大考中心學測 PDF（試題、答題卷與公開答案／評分資料） |
+| `pdfs/` | 依內容 SHA-256 命名的離線試卷資產；需與 `index.html` 一起保存 |
 | `tests/pdf_archive.py` | 本機資料包匯入、去重及完整性測試 |
 | `tests/past.cjs` / `tests/cloud.cjs` | 歷屆題流程與一鍵初始化模擬測試 |
 | `questions.json` | 同一份初始題庫，供檢閱與驗證；APP 不需載入此檔 |
