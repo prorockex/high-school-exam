@@ -18,6 +18,9 @@
       "id": "kh-nknush-math", "title": "高師大附中｜數學科高中段考試題", "provider": "國立高雄師範大學附屬高級中學數學科", "category": "校方科別題庫", "schools": ["高師大附中"], "coverage": "依高一、高二、高三分頁的數學科試題。", "url": "https://sites.google.com/tea.nknush.kh.edu.tw/nknush-math/%E9%AB%98%E4%B8%AD%E6%AE%B5%E8%80%83%E8%A9%A6%E9%A1%8C", "status": "公開科別網站", "note": "僅數學科；請檢查試題年份與課綱範圍。"
     },
     {
+      "id": "kh-justice-official", "title": "正義高中｜歷屆試題", "provider": "高雄市立正義高級中學（校方教務處）", "category": "校方官方題庫", "schools": ["正義高中"], "coverage": "校方教務處頁面連往公開Google Drive歷屆試題資料夾。", "url": "https://web.cysh.khc.edu.tw/zh/page/2f7f3a51-daf3-4328-e5fd-3a0f54e68e52", "status": "公開校方入口；官方頁最後發佈日期為2023-12-07，雲端檔案更新狀態未確認", "note": "應以原站雲端資料夾實際檔案為準；此項是題庫入口，不表示其涵蓋全部科目與年度。"
+    },
+    {
       "id": "kh-fengxin-114-math", "title": "鳳新高中114上高一第一次段考｜數學試題、答案與詳解", "provider": "御藍教育（第三方整理）", "category": "公開試卷與詳解", "schools": ["鳳新高中"], "coverage": "114學年度上學期、高一、數學；原卷18題，頁面提供答案與逐題詳解及PDF下載。", "url": "https://www.royalblue-education.com/school-exams/fhsh-114a-g10-1", "status": "公開；單一試卷頁已查閱", "note": "非校方網站。題目由第三方重新排版；在第三方原站閱讀／下載，本站不複製或重新託管。"
     },
     {
