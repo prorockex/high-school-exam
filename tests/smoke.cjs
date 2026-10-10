@@ -33,7 +33,7 @@ const http=require('node:http');
  assert.match(await page.locator('#settings-status').innerText(),/至少選一個考科/);
  assert.equal(await page.evaluate(()=>state.settings.subjects.length),5);
  await page.locator('[name=subject][value="英文"]').check();await page.locator('[name=subject][value="數學"]').check();
- await page.locator('#api-key').fill('test-key-not-real');await page.locator('#settings-form button[type=submit]').click();
+ await page.locator('#advanced-settings').evaluate(e=>e.open=true);await page.locator('#api-key').fill('test-key-not-real');await page.locator('#settings-form button[type=submit]').click();
  assert.ok(!(await page.evaluate(()=>localStorage.getItem(STORE))).includes('test-key-not-real'));
  // Offline exam, one wrong and one right answer.
  await page.locator('[data-page=exam]').click();await page.locator('#exam-number').fill('2');await page.locator('#start-exam').click();
@@ -52,7 +52,7 @@ const http=require('node:http');
  // CSV round trip with commas, quotes, newlines, BOM and hostile text rendered literally.
  const csv=await page.evaluate(()=>{const q=structuredClone(seed[0]);q.id='TEST-CSV';q.question='換行\n"quoted", <img src=x onerror="window.injected=true">';return csvString([q]);});
  await page.locator('[data-page=bank]').click();await page.locator('#csv-file').setInputFiles({name:'test.csv',mimeType:'text/csv',buffer:Buffer.from(csv)});
- assert.equal(await page.evaluate(()=>state.bank.length),31);
+ await page.waitForFunction(()=>state.bank.length===31);assert.equal(await page.evaluate(()=>state.bank.length),31);
  await page.locator('#bank-search').fill('quoted');assert.equal(await page.locator('#bank-list img').count(),0);assert.equal(await page.evaluate(()=>window.injected),undefined);
  assert.match(await page.locator('#bank-list').innerText(),/quoted/);
  const before=await page.evaluate(()=>JSON.stringify(state.bank));
@@ -61,9 +61,9 @@ const http=require('node:http');
  await assert.rejects(page.evaluate(()=>parseCSV('"unfinished')));
  // Reimport all 30 seed questions updates IDs without duplication.
  await page.locator('#csv-file').setInputFiles(path.resolve(__dirname,'../鳳新高中各科題庫.csv'));
- assert.equal(await page.evaluate(()=>state.bank.length),31);
+ await page.waitForFunction(()=>state.bank.length===31);assert.equal(await page.evaluate(()=>state.bank.length),31);
  // Mock CSV fetch success and failure preserving existing bank.
- await page.locator('[data-page=settings]').click();await page.locator('#csv-url').fill('https://example.test/bank.csv');await page.locator('#api-key').fill('test-key-not-real');await page.locator('#settings-form button[type=submit]').click();
+ await page.locator('[data-page=settings]').click();await page.locator('#advanced-settings').evaluate(e=>e.open=true);await page.locator('#csv-url').fill('https://example.test/bank.csv');await page.locator('#api-key').fill('test-key-not-real');await page.locator('#settings-form button[type=submit]').click();
  await page.route('https://example.test/bank.csv',route=>route.fulfill({status:200,contentType:'text/csv',body:csv}));
  await page.locator('[data-page=bank]').click();await page.locator('#sync-csv').click();await page.waitForFunction(()=>!document.querySelector('#sync-csv').disabled);assert.match(await page.locator('#csv-status').innerText(),/已合併/);
  await page.unroute('https://example.test/bank.csv');await page.route('https://example.test/bank.csv',route=>route.fulfill({status:403,body:'Denied'}));
@@ -82,12 +82,12 @@ const http=require('node:http');
  assert.equal(await page.evaluate(()=>{state.settings.examDate=dateKey();return buildPlan().length;}),0);
  assert.equal(await page.evaluate(()=>countdown()),0);
  // Screenshots and mobile overflow in every page.
- await page.reload();await page.screenshot({path:'/tmp/fengxin-desktop.png',fullPage:false});
+ await page.reload();await page.screenshot({path:'/Users/prorock/.hermes/cache/scratch/fengxin-desktop.png',fullPage:false});
  await page.setViewportSize({width:390,height:844});
  for(const section of ['settings','plan','exam','mistakes','bank']){
-  await page.locator(`[data-page=${section}]`).click();
+  await page.evaluate(s=>navigate(s),section);
   assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`mobile overflow: ${section}`);
  }
- await page.locator('[data-page=plan]').click();await page.screenshot({path:'/tmp/fengxin-mobile.png',fullPage:false});
+ await page.evaluate(()=>navigate('plan'));await page.screenshot({path:'/Users/prorock/.hermes/cache/scratch/fengxin-mobile.png',fullPage:false});
  assert.deepEqual(errors,[]);await browser.close();await new Promise(resolve=>server.close(resolve));console.log('PASS: offline UI, settings, planning, exams, mistake retry, persistence, CSV, mocked AI, responsive layout, escaping.');
 })().catch(e=>{console.error(e);process.exit(1);});

@@ -1,0 +1,52 @@
+const {chromium}=require('playwright');
+const fs=require('node:fs'),http=require('node:http'),assert=require('node:assert/strict'),path=require('node:path');
+(async()=>{
+ const server=http.createServer((req,res)=>{res.setHeader('Content-Type','text/html; charset=utf-8');res.end(fs.readFileSync(path.join(__dirname,'../index.html')))});await new Promise(r=>server.listen(0,'127.0.0.1',r));
+ const browser=await chromium.launch({executablePath:process.env.CHROMIUM_PATH||'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',headless:true});
+ const page=await browser.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));
+ const url=`http://127.0.0.1:${server.address().port}`;await page.goto(url);
+ try{
+ await page.evaluate(()=>{state.settings.week=[0,1,2,3,4,5,6];renderPlan()});
+ const task=await page.evaluate(()=>buildPlan()[0].tasks[0]);
+ assert.ok(await page.locator('[data-start-task]').count(),'task start buttons missing');
+ await page.locator('[data-start-task]').first().click();
+ assert.ok(await page.evaluate(t=>activeExam.questions.every(q=>q.subject===t.subject&&q.unit===t.unit),task));
+ await page.evaluate(()=>activeExam.questions.forEach((q,i)=>document.querySelector(`[name=answer-${i}][value=${q.answer}]`).click()));
+ await page.locator('#answer-form button[type=submit]').click();assert.equal(await page.evaluate(t=>!!state.done[t.id],task),false);
+ page.once('dialog',d=>d.dismiss());await page.locator('#confirm-task').click();assert.equal(await page.evaluate(t=>!!state.done[t.id],task),false);
+ page.once('dialog',d=>d.accept());await page.locator('#confirm-task').click();assert.equal(await page.evaluate(t=>state.done[t.id],task),true);
+ await page.evaluate(()=>{activeExam=null;startTask({id:'empty',subject:'英文',unit:'不存在'})});assert.equal(await page.evaluate(()=>activeExam),null);assert.match(await page.locator('#toast').innerText(),/單元.*沒有/);
+ console.log('PASS slice 1: exact task unit, explicit completion, empty unit');
+ await page.evaluate(()=>{apiKey='SECRET';startTask(buildPlan()[0].tasks[0])});await page.locator('[name=answer-0][value=B]').check();
+ assert.ok(await page.evaluate(()=>localStorage.getItem('fengxin-exam-draft-v1')),'draft missing');
+ const snapshot=await page.evaluate(()=>JSON.parse(localStorage.getItem('fengxin-exam-draft-v1')));assert.equal(snapshot.answers[0],'B');assert.ok(!JSON.stringify(snapshot).includes('SECRET'));
+ await page.reload();assert.equal(await page.locator('#answer-form').count(),0);await page.locator('#continue-draft').click();assert.equal(await page.locator('[name=answer-0]:checked').inputValue(),'B');assert.equal(await page.evaluate(()=>activeExam.task.id),snapshot.task.id);
+ await page.locator('#answer-form button[type=submit]').click();assert.equal(await page.evaluate(()=>localStorage.getItem('fengxin-exam-draft-v1')),null);
+ await page.evaluate(()=>startExam(seed.slice(0,2),true));await page.reload();await page.locator('#discard-draft').click();assert.equal(await page.evaluate(()=>localStorage.getItem('fengxin-exam-draft-v1')),null);
+ const study=await page.evaluate(()=>localStorage.getItem(STORE));await page.evaluate(()=>localStorage.setItem('fengxin-exam-draft-v1','{"questions":"bad"}'));await page.reload();assert.match(await page.locator('#draft-status').innerText(),/損毀/);assert.equal(await page.evaluate(()=>localStorage.getItem(STORE)),study);await page.locator('#discard-draft').click();
+ await page.evaluate(()=>{Storage.prototype.setItem=function(){throw Error('denied')};startExam(seed.slice(0,1))});await page.locator('[name=answer-0][value=A]').check();assert.match(await page.locator('#draft-status').innerText(),/無法.*儲存/);
+ console.log('PASS slice 2: draft snapshot, answers, resume/discard, submit cleanup, corruption/storage denial');
+ await page.reload();await page.evaluate(()=>startExam(seed.slice(0,1)));
+ assert.equal(await page.locator('#exam-controls').isVisible(),false,'active controls not collapsed');assert.equal(await page.locator('#exam-countdown').isVisible(),false);
+ assert.equal(await page.evaluate(()=>document.activeElement.className),'question');assert.ok(await page.locator('.question').first().evaluate(e=>e.getBoundingClientRect().top>=0&&e.getBoundingClientRect().top<innerHeight));
+ await page.locator('[name=answer-0][value=A]').check();await page.locator('#answer-form button[type=submit]').click();assert.equal(await page.evaluate(()=>document.activeElement.className),'result-banner');assert.ok(await page.locator('.result-banner').evaluate(e=>e.getBoundingClientRect().top>=0&&e.getBoundingClientRect().top<innerHeight));
+ await page.locator('#return-controls').click();assert.equal(await page.locator('#exam-controls').isVisible(),true);await page.locator('#start-exam').click();assert.equal(await page.locator('#answer-form').count(),1);
+ console.log('PASS slice 3: active collapse, question/result focus and scroll, return/restart');
+ await page.evaluate(()=>{localStorage.clear()});await page.reload();assert.match(await page.locator('#plan-confirmation').innerText(),/尚未確認/);
+ await page.evaluate(()=>navigate('settings'));assert.equal(await page.locator('#advanced-settings').getAttribute('open'),null);assert.ok(await page.locator('#settings-form button[type=submit]').evaluate(e=>e.compareDocumentPosition(document.querySelector('#advanced-settings'))&Node.DOCUMENT_POSITION_FOLLOWING));
+ await page.locator('#scope').fill('preserve');await page.locator('#settings-form button[type=submit]').click();assert.match(await page.locator('#plan-confirmation').innerText(),/已確認/);await page.reload();assert.equal(await page.locator('#scope').inputValue(),'preserve');assert.match(await page.locator('#plan-confirmation').innerText(),/已確認/);
+ console.log('PASS slice 4: unconfirmed defaults, nearby basic save, optional advanced, persisted settings');
+ await page.setViewportSize({width:390,height:844});assert.equal(await page.locator('#mobile-nav').evaluate(e=>getComputedStyle(e).position),'fixed');for(const b of await page.locator('#mobile-nav > button').all())assert.ok(await b.evaluate(e=>e.getBoundingClientRect().height>=44&&e.getBoundingClientRect().width>=44));
+ await page.locator('#mobile-more').focus();await page.keyboard.press('Enter');assert.equal(await page.locator('#more-links').isVisible(),true);await page.locator('#more-links [data-go=settings]').click();assert.equal(await page.locator('#page-settings').isVisible(),true);
+ await page.evaluate(()=>{state.mistakes=Object.fromEntries(seed.slice(0,18).map(q=>[q.id,{question:q,count:1,lastDate:dateKey()}]));navigate('mistakes')});await page.locator('#mistake-subject').selectOption('英文');await page.locator('#retry-five').click();assert.equal(await page.evaluate(()=>activeExam.questions.length),5);assert.equal(await page.evaluate(()=>activeExam.questions.every(q=>q.subject==='英文')),true);
+ await page.evaluate(()=>{activeExam.submitted=true;navigate('mistakes')});await page.locator('#retry-mistakes').click();assert.equal(await page.evaluate(()=>activeExam.questions.length),15);
+ await page.evaluate(()=>{activeExam.submitted=true;navigate('mistakes')});await page.locator('#mistake-subject').selectOption('國文');assert.equal(await page.locator('#retry-five').isDisabled(),true);assert.equal(await page.locator('#retry-mistakes').isDisabled(),true);
+ await page.evaluate(()=>navigate('past'));await page.locator('#public-source-search').fill('NO-MATCH-xyz');assert.ok(!(await page.locator('#public-source-list').innerText()).includes('改選'));await page.locator('#clear-source-search').click();assert.equal(await page.locator('#public-source-search').inputValue(),'');assert.ok(await page.locator('#public-source-list article').count());
+ await page.locator('#more-links').evaluate(e=>e.hidden=false);for(const section of ['plan','exam','mistakes','past','bank','settings']){await page.evaluate(s=>navigate(s),section);assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),section+' overflow');}
+ assert.ok(await page.locator('#advanced-settings summary').evaluate(e=>e.getBoundingClientRect().height>=44));
+ console.log('PASS slice 5: mobile navigation/keyboard More, filtered 5/full/empty retry, actionable source search, tap sizes/overflow');
+ await page.evaluate(()=>localStorage.clear());await page.reload();await page.evaluate(()=>{state.done['test-task']=true;persist()});await page.reload();assert.match(await page.locator('#plan-confirmation').innerText(),/尚未確認/,'unconfirmed defaults must survive study saves');
+ console.log('PASS regression: study saves do not confirm defaults');
+ assert.deepEqual(errors,[]);
+ }finally{await browser.close();await new Promise(r=>server.close(r));}
+})().catch(e=>{console.error(e);process.exitCode=1});
