@@ -227,10 +227,6 @@ ExamBank 已從 APP、來源索引與下載入口排除；本專案不會自動�
 
 目前提供的 HTML 沒有 ExamBank PDF 資產；PDF 資料庫的本機保存功能已用測試檔案驗證，這些測試檔案沒有納入正式題庫。
 
-### 高師大附中高一數學試題來源
-
-已將 [高師大附中數學科高一試題分享頁](https://sites.google.com/tea.nknush.kh.edu.tw/math/%E8%A9%A6%E9%A1%8C%E5%88%86%E4%BA%AB/%E9%AB%98%E4%B8%AD%E6%AE%B5%E8%80%83%E8%A9%A6%E9%A1%8C/%E9%AB%98%E4%B8%80%E8%A9%A6%E9%A1%8C?authuser=0) 加入「各高中歷屆考題」的來源索引，選擇高師大附中即可找到。雲端工作環境讀取該 Google Sites 時收到 HTTP 403，因此目前提供原站入口，尚未把附件下載到 `pdfs/` 或匯入自動批改題庫。來源恢復可讀後，可再核對檔案與授權並補入目錄。
-
 ### 高師大附中高一數學歷屆試題
 
 已從[高師大附中數學科高一試題分享頁](https://sites.google.com/tea.nknush.kh.edu.tw/math/%E8%A9%A6%E9%A1%8C%E5%88%86%E4%BA%AB/%E9%AB%98%E4%B8%AD%E6%AE%B5%E8%80%83%E8%A9%A6%E9%A1%8C/%E9%AB%98%E4%B8%80%E8%A9%A6%E9%A1%8C?authuser=0)取回並內建 37 份可讀取的 PDF。試卷檔名與目錄包含從 PDF 首頁辨識的學年度、學期與考次；每項目保留原始 Google Drive／Docs 連結與來源頁。尚有 20 個分享連結無法取得（3 個回傳 404、17 個回傳 410），因此未列為本機檔案。新增試卷存放於 `pdfs/`，須與 `index.html` 一起保存。
