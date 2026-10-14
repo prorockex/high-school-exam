@@ -12,7 +12,7 @@
 | `appsscript.json` | 台灣時區及最少必要的 Apps Script 權限宣告 |
 | `高雄高中歷屆考題範本.csv` | 17 欄空白歷屆題範本，不含假歷屆試題 |
 | `高雄高中學校名錄.csv` / `schools.json` | 47 校常用選項；非完整或即時官方名錄 |
-| `pdf-catalog.json` | 網頁內建 PDF 目錄：目前包含 111–115 學年度大考中心學測 PDF（試題、答題卷與公開答案／評分資料） |
+| `pdf-catalog.json` | 網頁內建 PDF 目錄：目前共 170 份，包含 111–115 學年度大考中心學測資料與高師大附中 108–114 學年度 37 份高一數學試題 |
 | `public-exam-sources.json` | 外部公開題庫來源索引；僅連結原站，不鏡像學校或第三方試卷 |
 | `pdfs/` | 依內容 SHA-256 命名的離線試卷資產；需與 `index.html` 一起保存 |
 | `tests/pdf_archive.py` | 本機資料包匯入、去重及完整性測試 |
@@ -230,3 +230,7 @@ ExamBank 已從 APP、來源索引與下載入口排除；本專案不會自動�
 ### 高師大附中高一數學試題來源
 
 已將 [高師大附中數學科高一試題分享頁](https://sites.google.com/tea.nknush.kh.edu.tw/math/%E8%A9%A6%E9%A1%8C%E5%88%86%E4%BA%AB/%E9%AB%98%E4%B8%AD%E6%AE%B5%E8%80%83%E8%A9%A6%E9%A1%8C/%E9%AB%98%E4%B8%80%E8%A9%A6%E9%A1%8C?authuser=0) 加入「各高中歷屆考題」的來源索引，選擇高師大附中即可找到。雲端工作環境讀取該 Google Sites 時收到 HTTP 403，因此目前提供原站入口，尚未把附件下載到 `pdfs/` 或匯入自動批改題庫。來源恢復可讀後，可再核對檔案與授權並補入目錄。
+
+### 高師大附中高一數學歷屆試題
+
+已從[高師大附中數學科高一試題分享頁](https://sites.google.com/tea.nknush.kh.edu.tw/math/%E8%A9%A6%E9%A1%8C%E5%88%86%E4%BA%AB/%E9%AB%98%E4%B8%AD%E6%AE%B5%E8%80%83%E8%A9%A6%E9%A1%8C/%E9%AB%98%E4%B8%80%E8%A9%A6%E9%A1%8C?authuser=0)取回並內建 37 份可讀取的 PDF。試卷檔名與目錄包含從 PDF 首頁辨識的學年度、學期與考次；每項目保留原始 Google Drive／Docs 連結與來源頁。尚有 20 個分享連結無法取得（3 個回傳 404、17 個回傳 410），因此未列為本機檔案。新增試卷存放於 `pdfs/`，須與 `index.html` 一起保存。

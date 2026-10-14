@@ -176,10 +176,10 @@
       "schools": [
         "高師大附中"
       ],
-      "coverage": "依高一、高二、高三分頁的數學科試題；另有高一試題分享頁。",
+      "coverage": "高一數學段考，已內建 108–114 學年度共 37 份可取得 PDF；題目以學年度、學期與考次命名。",
       "url": "https://sites.google.com/tea.nknush.kh.edu.tw/nknush-math/%E9%AB%98%E4%B8%AD%E6%AE%B5%E8%80%83%E8%A9%A6%E9%A1%8C",
-      "status": "來源頁已登錄；此工作環境連線回應 403，附件待確認",
-      "note": "透過原始 Google Sites 頁查看／下載。尚未取得附件，因此目前未納入本機 PDF；待來源可連線後再確認可公開下載的檔案。",
+      "status": "已內建 37 份 PDF；另 20 個分享連結失效（3 個 404、17 個 410）",
+      "note": "已下載並驗證 PDF 完整性，APP 可離線閱讀。每份保留 Google Drive／Docs 原始連結及分享頁來源。失效連結未匯入；可在原始分享頁查看目前檔案狀態。",
       "downloads": [
         {
           "title": "高一試題分享（Google Sites）",
