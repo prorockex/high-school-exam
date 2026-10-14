@@ -170,16 +170,23 @@
     },
     {
       "id": "kh-nknush-math",
-      "title": "高師大附中｜數學科高中段考試題",
+      "title": "高師大附中｜數學科高中段考試題（高一試題分享）",
       "provider": "國立高雄師範大學附屬高級中學數學科",
       "category": "校方科別題庫",
       "schools": [
         "高師大附中"
       ],
-      "coverage": "依高一、高二、高三分頁的數學科試題。",
+      "coverage": "依高一、高二、高三分頁的數學科試題；另有高一試題分享頁。",
       "url": "https://sites.google.com/tea.nknush.kh.edu.tw/nknush-math/%E9%AB%98%E4%B8%AD%E6%AE%B5%E8%80%83%E8%A9%A6%E9%A1%8C",
-      "status": "公開科別網站",
-      "note": "僅數學科；請檢查試題年份與課綱範圍。"
+      "status": "來源頁已登錄；此工作環境連線回應 403，附件待確認",
+      "note": "透過原始 Google Sites 頁查看／下載。尚未取得附件，因此目前未納入本機 PDF；待來源可連線後再確認可公開下載的檔案。",
+      "downloads": [
+        {
+          "title": "高一試題分享（Google Sites）",
+          "url": "https://sites.google.com/tea.nknush.kh.edu.tw/math/%E8%A9%A6%E9%A1%8C%E5%88%86%E4%BA%AB/%E9%AB%98%E4%B8%AD%E6%AE%B5%E8%80%83%E8%A9%A6%E9%A1%8C/%E9%AB%98%E4%B8%80%E8%A9%A6%E9%A1%8C?authuser=0"
+        }
+      ],
+      "actionLabel": "開啟數學試題來源 ↗"
     },
     {
       "id": "kh-justice-official",

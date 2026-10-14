@@ -1069,5 +1069,14 @@
     }
   ],
   "updatedAt": "2026-10-09T09:49:24.000164+08:00",
-  "importFailures": []
+  "importFailures": [],
+  "pendingSources": [
+    {
+      "id": "kh-nknush-math-grade10",
+      "title": "高師大附中高一數學試題分享",
+      "url": "https://sites.google.com/tea.nknush.kh.edu.tw/math/%E8%A9%A6%E9%A1%8C%E5%88%86%E4%BA%AB/%E9%AB%98%E4%B8%AD%E6%AE%B5%E8%80%83%E8%A9%A6%E9%A1%8C/%E9%AB%98%E4%B8%80%E8%A9%A6%E9%A1%8C?authuser=0",
+      "status": "awaiting_access",
+      "note": "Google Sites returned HTTP 403 from the cloud workspace; no attachments imported."
+    }
+  ]
 }
